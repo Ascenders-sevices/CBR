@@ -1,0 +1,25 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Coral Beach Resort",
+  "description": "A beautiful beachfront resort offering luxurious rooms and world-class amenities.",
+  "url": "https://www.coralbeachresort.in/",
+  "telephone": "+91-9444-333-333",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2nd Floor, Venkateshwara Complex 35, Meeran Sahib St, Mount Road",
+    "addressLocality": "CHENNAI",
+    "addressRegion": "TAMIL NADU",
+    "postalCode": "600002",
+    "addressCountry": "INDIA"
+  },
+  "image": [
+    "https://www.yourresort.com/images/resort-front.jpg",
+    "https://www.yourresort.com/images/pool.jpg"
+  ],
+  "priceRange": "₹5000 - ₹15000 per night",
+  "checkinTime": "14:00",
+  "checkoutTime": "12:00"
+}
+</script>

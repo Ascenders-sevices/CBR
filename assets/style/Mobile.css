@@ -1,0 +1,388 @@
+
+/* Extra Small Devices (320px - 427px) */
+@media (min-width: 320px) and (max-width: 427px) {
+  
+
+    .py-80{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .hero h1{
+        font-size: 20px;
+   
+        
+    }
+    .offer-container{
+        padding: 10px;
+    }
+    .hero {
+        height: 30vh;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    
+    .contact-section{
+        padding: 20px;
+    }
+    .btn-color {
+        width: 100%;
+    }
+    .book_2 {
+        min-width: 200px;
+        max-width: 90%;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .Coral_2{
+        padding: 0px ;
+        text-align: justify;
+
+    }
+    .Book_button button {
+        width: 100%;
+    }
+    .btn-color{
+        width: 100%;
+    }
+    .experiences-text {
+        padding-right: 10px !important ;
+        padding-left: 10px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .Weather_button button{
+   width: 100%;
+    }
+    .book_2{
+       max-width: 100% !important;
+    }
+    p{
+        font-size: 14px;
+        line-height: 28px;
+        text-align: justify;
+    }
+    .experience-section{
+        padding: 20px 0px;
+    }
+    .experience-title{
+        font-size: 18px;
+    }
+    .experience-text{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .experiences-text h2{
+        font-size: 30px;
+    }
+    .luxury-title{
+        font-size: 20px;
+    }
+    .luxury-btn {
+     font-size: 14px;
+    } 
+    .head_page{
+        font-size: 24px;
+    }
+    .py-50{
+        padding: 40px 0px ;
+    }
+}
+
+/* Small Mobile Devices (428px - 480px) */
+@media (min-width: 428px) and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    .weather-section, .Coral_2, .book_2 {
+        text-align: center;
+    }
+  
+    .btn-color {
+        width: 100%;
+    }
+    .book_2 {
+        min-width: 250px;
+        max-width: 95%;
+        display: block;
+        margin: 10px auto;
+    }
+    .Coral_2{
+        padding: 0px !important;
+        text-align: justify;
+
+    }
+    .py-80{
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+    .Book_button button {
+        width: 100%;
+    }
+    .btn-color{
+        width: 100%;
+    }
+    .experiences-text {
+        padding-right: 10px !important ;
+        padding-left: 10px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .Weather_button button{
+        width: 100%;
+         }
+         .book_2{
+            max-width: 100% !important;
+         }
+         p{
+             font-size: 14px;
+             line-height: 28px;
+             text-align: justify;
+         }
+         .experience-section{
+             padding: 20px 0px;
+         }
+         .experience-title{
+             font-size: 18px;
+         }
+         .experience-text{
+             font-size: 14px;
+             line-height: 28px;
+         }
+         .experiences-text h2{
+             font-size: 20px;
+         }
+         .luxury-title{
+             font-size: 20px;
+         }
+         .luxury-btn {
+          font-size: 14px;
+         }
+         .hero h1{
+            font-size: 20px;
+       
+        }
+        .contact-section{
+            padding: 20px;
+        }
+        .hero {
+            height: 30vh;
+            display: flex ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .head_page{
+            font-size: 24px;
+        }
+        .py-50{
+            padding: 40px 0px ;
+        }
+        .experiences-section{
+            padding: 12px;
+        }
+    
+}
+
+/* Tablets (481px - 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+
+    .navbar-toggler {
+        border: none;
+    }
+    .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+    }
+    .book-now-btn {
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .book_2 {
+        min-width: 300px;
+        max-width: 80%;
+        display: block;
+        margin: 15px auto;
+    }
+    .Coral_2{
+        padding: 0px ;
+        text-align: justify;
+
+    }
+    .py-80{
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+    }
+    .Book_button button {
+        width: 100%;
+    }
+    .btn-color{
+        width: 100%;
+    }
+    .experiences-text {
+        padding-right: 10px !important ;
+        padding-left: 10px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .experiences-section .col-md-4{
+        width: 100%;
+    }
+    .Weather_button button{
+        width: 100%;
+    }
+    .book_2{
+        max-width: 100%;
+    }
+    .hero {
+        
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    .experiences-section{
+        padding: 12px;
+    }
+    .custom-carousel {
+        width: 100%;
+        padding: 12px;
+    }
+ 
+    
+}
+
+/* Laptops & Larger Screens (769px - 1020px) */
+@media (min-width: 769px) and (max-width: 991px) {
+
+    .navbar-brand img {
+        width: 120px;
+    }
+    .container{
+        max-width: 100% !important;
+    }
+    .custom-carousel {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .video-container video {
+        width: 100%;
+       
+    }
+    .Weather_button {
+        flex-direction: column;
+    }
+    .btn-color {
+        width: 100%;
+    }
+    .book_2 {
+        min-width: 350px;
+        max-width: 75%;
+        display: block;
+        margin: 20px auto;
+    }
+    .Coral_2{
+        padding: 0px !important;
+    }
+    .py-80{
+        padding-top: 20px ;
+        padding-bottom: 20px ;
+    }
+    .Book_button button {
+        width: 100%;
+    }
+    .btn-color{
+        width: 100%;
+    }
+    .experiences-text {
+        padding-right: 10px !important ;
+        padding-left: 10px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .experiences-section .col-md-8{
+        width: 100% !important;
+    }
+    .swiper-slide img {
+        
+        object-fit: cover; /* Keep images filling the space */
+    }
+    .experiences-section .col-md-4{
+        width: 100%;
+    }
+    .experiences-text {
+        padding-right: 10px !important ;
+        padding-left: 10px !important;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .experiences-section .col-md-4{
+        width: 100%;
+    }
+    .Weather_button button{
+        width: 100%;
+    }
+    .book_2{
+        max-width: 100%;
+    }
+    .suite{
+        width: 100% !important;
+    }
+    .experiences-section{
+        padding: 12px;
+    }
+
+}
+
+/* Desktop (1021px and above) */
+@media (min-width: 992px) and (max-width: 1024px) {
+  
+    .book_2 {
+        min-width: 400px;
+        max-width: 70%;
+        display: block;
+        margin: 25px auto;
+    }
+    .Coral_2{
+        padding: 0px !important;
+    }
+    .Book_button button {
+        width: 100%;
+    }
+    .btn-color{
+        width: 100%;
+    }
+    .experiences-section .col-md-8{
+        width: 100% !important;
+    }
+    .swiper-slide img {
+        
+        object-fit: cover; /* Keep images filling the space */
+    }
+    .experiences-section .col-md-4{
+        width: 100%;
+    }
+  
+    .book_2{
+       max-width: 100%;
+    }
+    .Weather_button button{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+   
+    .Coral_2{
+        padding: 0px !important;
+    }
+
+}

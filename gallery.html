@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort Gallery | Coral Beach Resort Mahabalipuram</title>
+    <meta name="description" content="View stunning photos of Coral Beach Resort, Mahabalipuram. Explore luxury rooms, beach views, resort facilities & interiors." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Resort Gallery | Coral Beach Resort Mahabalipuram" />
+    <meta property="og:description" content="Explore stunning visuals of Coral Beach Resort, rooms, beach views & facilities." />
+    <meta property="og:url" content="https://www.coralbeachresort.in/gallery" />
+    <meta property="og:image" content="https://www.coralbeachresort.in/assets/images/og/gallery.jpg" />
+    <meta name="twitter:title" content="Resort Gallery | Coral Beach Resort" />
+    <meta name="twitter:description" content="See the beauty of our beachfront resort." />
+    <meta name="twitter:image" content="https://www.coralbeachresort.in/assets/images/og/gallery.jpg" />
+
+    <link rel="icon" href="/assets/images/Corolminimal.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="canonical" href="https://www.coralbeachresort.in/gallery" />
+
+
+    <!-- Google Fonts (Load early for better rendering) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:wght@100..700&family=Poppins:wght@100..900&family=Roboto:wght@100..900&display=swap">
+
+    <!-- Bootstrap CSS (Load early for layout consistency) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Icons (Bootstrap + Font Awesome) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <!-- Custom Stylesheets (Keep at the end for better specificity) -->
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="/assets/style/Mobile.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+
+
+
+<body>
+    <script src="/script/index.js" defer></script>
+    <!-- Navbar -->
+    <div class="over">
+    
+        <a href="https://wa.me/919444333333" target="_blank">
+            <div class="icon-fixed whatsapp-icon">
+                <i class="fab fa-whatsapp fa-lg"></i>
+            </div>
+        </a>
+
+    
+        <a
+            href="mailto:reservations@thecoralbeachresort.com?subject=Booking%20Inquiry&body=Hello%20Team,%0AI%20would%20like%20to%20book%20a%20room%20at%20your%20resort.%20Please%20share%20availability%20and%20pricing.">
+            <div class="icon-fixed email-icon">
+                <i class="fas fa-envelope fa-lg"></i>
+            </div>
+        </a>
+
+
+        <!-- Scroll to Top Icon Center Bottom -->
+        <div class="icon-fixed scroll-top" id="scrollTopBtn" onclick="scrollToTop()">
+            <i class="fas fa-arrow-up fa-lg"></i>
+        </div>
+
+
+        <!-- Desktop Navbar (Visible on Large Screens) -->
+        <nav class="navbar navbar-expand-lg fixed-top d-none d-lg-flex" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="/assets/images/Logo  Corallogo.png" alt="Coral Beach Resort">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hotel Groups</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-geo-alt-fill"></i> CORAL BEACH RESORT
+                                        <span class="d-block text-muted">ECR – MAHABALIPURAM</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://www.greencoconutresort.in/">
+                                        <i class="bi bi-geo-alt-fill"></i> GREEN COCONUT RESORT
+                                        <span class="d-block text-muted">ECR – MUTTUKADU</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="https://greenlakeresort.bookingmania.in/">
+                                        <i class="bi bi-geo-alt-fill"></i> GREEN LAKE VIEW RESORT
+                                        <span class="d-block text-muted">KODAIKANAL</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/packages.html">Packages</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="/facilities.html">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contacts.html">Contact Us</a></li>
+                    </ul>
+                    <a href="https://app.axisrooms.com/beV2/displaySearchResultV3.html?applicableDealId=0&room_number=0&login=false&allHotels=true&searcherId=54111423&searchNumber=1"
+                        class="book-now-btn ms-3">BOOK NOW</a>
+                        <a href="https://maps.app.goo.gl/cDAjnZT5ipLszZv29" class="virtual-btn ms-3">
+                            <img src="/assets/gallery/VT1.png" alt="Virtual Tour" style="height: 40px; width: auto;">
+                        </a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Mobile Navbar (Only Visible on Mobile & Tablet) -->
+        <nav class="navbar fixed-top  d-lg-none" style="background-color: #15A1A9;">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="/assets/images/Coralmin.png" alt="Coral Beach Resort">
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start d-lg-none" id="mobileNav">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hotel Groups</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-geo-alt-fill"></i> CORAL BEACH RESORT
+                                    <span class="d-block text-muted">ECR – MAHABALIPURAM</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-geo-alt-fill"></i> GREEN COCONUT RESORT
+                                    <span class="d-block text-muted">ECR – MUTTUKADU</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-geo-alt-fill"></i> KODAIKANAL
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/packages.html">Packages</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="/facilities.html">Facilities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacts.html">Contact Us</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    <section>
+        <div class="hero_container"
+            style="background-image: url(/assets/images/gallery-banner.JPG); background-repeat: no-repeat; background-size: cover;object-fit: cover;">
+            <div class="container">
+                <div class="hero">
+                    <h1>Gallery</h1>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcrumb-section">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="text-center py-50 head_page">Our Gallery</h2>
+    </section>
+    <section class="pb-5">
+        <div class="container">
+
+            <div class="row gallery ">
+                <!-- Gallery (1 to 25) -->
+                <!-- Repeat this block for each image -->
+                <!-- Each row has 4 for larger screens, 2 for smaller -->
+                <!-- Adjust the column settings as needed -->
+
+                <!-- Loop manually for 25 -->
+                <!--: /assets/images/1.jpg to /assets/images/25.jpg -->
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img1.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img1.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img2.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img2.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img3.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img3.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img4.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img4.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img5.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img5.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img6.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img6.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/7.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/7.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/8.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/8.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img9.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img9.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img10.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img10.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img11.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img11.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img12.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img12.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img13.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img13.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img14.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img14.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img15.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img15.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img16.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img16.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img17.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img17.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img18.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img18.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img19.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img19.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img20.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img20.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+
+                <!-- 21 to 25 -->
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img21.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img21.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img22.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img22.JPG" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img23.JPG" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img23.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img24.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img24.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img25.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img25.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img26.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img26.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img27.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img27.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="/assets/images/img28.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        <img src="/assets/images/img28.jpg" alt="Gallery Image" class="img-fluid" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content position-relative">
+                    <!-- Close Button -->
+
+                    <div class="modal-body text-center">
+                        <img id="modalImage" class="modal-img img-fluid rounded shadow-lg" src="" alt="Large Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row  text-md-start">
+                    <!-- Column 1 -->
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <h5>CoralBeachResort</h5>
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/rooms.html">Rooms</a></li>
+                            <li><a href="/packages.html">Packages</a></li>
+
+                            <li><a href="/facilities.html">Facilities</a></li>
+                            <li><a href="/contacts.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <h5>Rooms</h5>
+                        <ul>
+                            <li><a href="/rooms.html">Deluxe Room</a></li>
+                            <li><a href="/rooms.html">Deluxe Family Suite</a></li>
+                            <li><a href="/rooms.html">Club Room</a></li>
+                            <li><a href="/rooms.html">Premium Suite</a></li>
+                            <li><a href="/rooms.html">Pool Villa</a></li>
+
+                        </ul>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-12 col-sm-6 col-md-3 mb-4">
+                        <h5>Links</h5>
+                        <ul>
+                            <li><a href="#FAQ">FAQ</a></li>
+                            <li><a href="/terms-and-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="privacy-statement.html">Privacy Statement</a></li>
+                            <li><a href="payment-terms.html">Payment Terms</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 4 -->
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <h5>Contact Us</h5>
+                         <div class="contact-item">
+                          <span class="icon">📞</span>
+                          <a href="tel:9444-333-333">9444-333-333</a>
+                        </div>
+
+                         <div class="contact-item">
+                          <span class="icon">📧</span>
+                           <a href="mailto:res@coralbeach.in">
+                                 res@coralbeach.in
+                            </a>
+                        </div>
+
+                       <div class="contact-item">
+                          <span class="icon">📍</span>
+                            <p class="address-text">
+                            2nd Floor, Venkateshwara Complex 35,
+                            Meeran Sahib St, Mount Road,
+                            Chennai, Tamil Nadu 600002
+                           </p>
+                        </div>
+                        
+
+
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p>Copyright © 2025 All rights reserved by Ascenders <a href="/privacy-policy.html">Privacy
+                            Policy</a></p>
+                            <div class="social-icons">
+                            <a href="https://www.facebook.com/share/19GKK9A5T2/" target="_blank"><img class="img-fluid"
+                                    src="/assets/images/FACE3.png" alt="Share Coral Beach Resort on Facebook"></a>
+                            <a href="https://www.instagram.com/coralbeachresort_ecr?igsh=eGNxMm9xMW15dXA3"
+                                target="_blank"><img class="img-fluid" src="/assets/images/instagram2.png" alt="Follow Coral Beach Resort on Instagram"></a>
+                            <a href="https://youtube.com/@coralbeachresort109?si=WukbimylsYiRYW2r" target="_blank"><img
+                                    class="img-fluid" src="/assets/images/Y-1.png" alt="Watch Coral Beach Resort videos on YouTube"></a>
+
+                        </div>
+                </div>
+            </div>
+        </footer>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+
+<!-- Blog Main JS -->
+<script src="/script/core.js" defer></script>
+<script src="/script/main.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.coralbeachresort.in/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Gallery",
+    "item": "https://www.coralbeachresort.in/gallery"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Coral Beach Resort Gallery",
+  "url": "https://www.coralbeachresort.in/gallery",
+  "description": "Photo gallery showcasing rooms, beach views, facilities and interiors of Coral Beach Resort Mahabalipuram."
+}
+</script>
+
+</body>
+</html>
