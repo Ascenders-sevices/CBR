@@ -1,184 +1,1267 @@
-/* ===============================
-   Google Fonts Imports
-   =============================== */
-
-/* Primary fonts: Inter, Josefin Sans, Montserrat, Poppins, Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Additional font: Lato */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Serif font for headings/content: Frank Ruhl Libre */
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-/* ===============================
-   Global Reset & Base Styles
-   =============================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Frank Ruhl Libre", serif;
 
-*{margin:0;padding:0;font-family:"Frank Ruhl Libre",serif}
-body{background:#fff}
-a{text-decoration:none!important}
-p{color:#111;font-size:18px;line-height:36px;font-weight:400}
-.over{overflow-x:hidden}
-
-
-/* ===============================
-   Navbar Styles
-   =============================== */
-
-.navbar{transition:.3s ease-in-out}
-
-/* Fixed navbar on scroll */
-.nav-fixed{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-max-height:130px;
-background:#15a2a9bb!important;
-z-index:1000
 }
 
-.nav-link{
-color:#fafafa!important;
-font-family:Montserrat,sans-serif;
-font-weight:400
+body {
+  background-color: #fff;
 }
 
-/* Active navigation link */
-.navbar-nav .nav-link.active{color:#ffd700!important}
+a {
+  text-decoration: none !important;
 
 
-/* ===============================
-   Buttons
-   =============================== */
-
-/* Book Now button */
-.book-now-btn{
-background:#d49c60;
-color:#fff;
-padding:6px 12px;
-border-radius:4px;
-font-weight:bold
 }
-.book-now-btn:hover{background:#c48750}
 
-/* Virtual tour button */
-.virtual-btn{
-background:transparent;
-color:#fafafa;
-padding:8px 15px;
-border-radius:5px;
-font-weight:bold
+.breadcrumb-item.active {
+  color: #fafafa !important;
+  content: "";
 }
-.virtual-btn img{transition:.3s}
-.virtual-btn img:hover{transform:scale(1.1);opacity:.8}
 
-
-/* ===============================
-   Video Section
-   =============================== */
-
-.video-container{
-position:relative;
-width:100%;
-height:100vh;
-overflow:hidden
+.Book_button a {
+  color: #fafafa;
+  padding: 0px 08px;
 }
-.video-container video{
-width:100%;
-height:100%;
-object-fit:cover
+
+.over {
+  overflow-x: hidden;
 }
 
 
-/* ===============================
-   Suite / Card Hover Section
-   =============================== */
+p {
+  color: #111111;
+  font-size: 18px;
+  line-height: 36px;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: 400px;
 
-.suite{
-height:600px;
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-align-items:center;
-text-align:center;
-color:#fff;
-position:relative;
-overflow:hidden
 }
 
-/* Overlay effect */
-.suite::after{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(21,161,169,0);
-transition:.3s
+.py-80 {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.suite:hover::after{background:rgba(0,0,0,.4)}
 
-/* Hover text animation */
-.suite h3,.suite p,.suite button{transition:.3s}
-.suite p,.suite button{opacity:0;transform:translateY(20px)}
+.py-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffd700 !important;
+
+}
+
+
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  max-height: 130px;
+  background-color: #15a2a9bb !important;
+
+  z-index: 1000;
+}
+
+.nav-link {
+  color: #fafafa !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+
+/* Add margin to body to prevent content shift */
+
+.book-now-btn {
+  background: #ffd700;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: bold;
+}
+
+.book-now-btn:hover {
+  background: #ffc107;
+}
+
+.book-now-btn {
+  background-color: #d49c60;
+  color: #fafafa;
+  font-weight: bold;
+  padding: 8px 15px;
+  font-family: "Frank Ruhl Libre", serif;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.book-now-btn:hover {
+  background-color: #c48750;
+  color: #fafafa;
+}
+
+.virtual-btn {
+  background: #ffd700;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: bold;
+}
+
+.virtual-btn:hover {
+  background: #ffc107;
+}
+
+.virtual-btn img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.virtual-btn img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.virtual-btn {
+  background-color: #d49c6000;
+  color: #fafafa;
+  font-weight: bold;
+  padding: 8px 15px;
+  font-family: "Frank Ruhl Libre", serif;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.virtual-btn:hover {
+  background-color: #c4865000;
+  color: #fafafa;
+}
+
+/* Video Background Styling */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  /* adjust this */
+}
+
+/* Extra for Mobile Responsiveness */
+
+
+.weather-icon {
+  font-size: 2rem;
+}
+
+.book-btn {
+  background-color: #004d25;
+  color: #fafafa;
+  padding: 10px 20px;
+  font-family: "Frank Ruhl Libre", serif;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.Weather_button {
+  background-color: #15a1a9;
+  width: 100%;
+  color: #fafafa;
+  text-align: center;
+  box-shadow: 0px;
+  border: none;
+}
+
+.Book_button button {
+  background-color: #15a1a9;
+  color: #fafafa;
+  border: none;
+  width: 500px;
+  font-family: "Frank Ruhl Libre", serif;
+  padding: 14px;
+  font-size: 16px;
+
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.Coral_2 {
+  padding: 0px 100px;
+}
+
+
+.suite {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+
+}
+
+.luxury-suite {
+  background: url("/assets/gallery/Deluxe\ Rooms.png") center/cover no-repeat;
+  color: #fafafa;
+  padding: 50px 8px;
+}
+
+.Club-Room {
+  background: url("/assets/gallery/Club\ Suite.png") center/cover no-repeat;
+  color: #fafafa;
+  padding: 50px 8px;
+}
+
+.neelakurinji-suite {
+  background: url("/assets/gallery/Villa.png") center/cover no-repeat;
+  color: #fafafa;
+  padding: 50px 8px;
+}
+
+.suite p {
+  font-size: 18px;
+}
+
+.suite h3,
+.suite p,
+.suite button {
+
+  transition: all 0.3s ease-in-out;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.suite h3 {
+  font-weight: 400;
+  font-size: 2.125rem;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.suite p,
+.suite button {
+  opacity: 0;
+  transform: translateY(20px);
+
+}
+
+.suite::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(21, 161, 169, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.suite:hover::after {
+  background: rgba(0, 0, 0, 0.4);
+  /* Light black transparent overlay */
+
+}
+
 .suite:hover h3,
 .suite:hover p,
-.suite:hover button{
-opacity:1;
-transform:none;
-z-index:2
+.suite:hover button {
+  color: rgba(255, 255, 255, 1) !important;
+  opacity: 1 !important;
+  z-index: 2;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.suite:hover h3 {
+  transform: translateY(-120px);
+}
+
+.suite:hover p {
+  transform: translateY(-50px);
+
 }
 
 
-/* ===============================
-   Footer
-   =============================== */
+.suite:hover button a {
+  opacity: 1;
 
-.footer{
-background:#e6d5b8;
-padding:40px 0
-}
-.footer ul{list-style:none;padding:0}
-.footer ul li a{color:#000}
+  transform: translateY(0);
 
-
-/* ===============================
-   Fixed Icons (WhatsApp / Call etc.)
-   =============================== */
-
-.icon-fixed{
-position:fixed;
-z-index:1000;
-width:50px;
-height:50px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-transition:.3s
-}
-.icon-fixed:hover{transform:scale(1.1)}
-
-
-/* ===============================
-   Responsive Styles
-   =============================== */
-
-/* Tablets & below */
-@media(max-width:992px){
-.suite{height:400px;padding:40px 16px}
-.suite h3{font-size:1.75rem}
-.suite p{font-size:16px}
 }
 
-/* Mobile devices */
-@media(max-width:576px){
-.suite{
-height:300px;
-padding:30px 12px;
-justify-content:center
+.suite button :hover {
+  opacity: 1;
+  color: #000 !important;
+  transform: translateY(0);
+
 }
-.suite h3{font-size:1.5rem}
-.suite p{font-size:14px}
+
+.TESTIMONIALS h3 {
+  font-size: 40px;
+  font-weight: 500px;
+  font-family: 'Frank Ruhl Libre', serif;
+
 }
+
+h2 {
+  color: #15a1a9 !important;
+}
+
+
+.btn-outline-light {
+  padding: 14px 60px !important;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-outline-light a {
+  color: #000 !important;
+
+}
+
+.custom-carousel {
+  width: 350px;
+}
+
+.experiences-section {
+  display: flex;
+  align-items: center;
+  /* padding: 50px; */
+  background-color: #f8f9fa;
+}
+
+.experiences-text {
+  padding-right: 50px !important;
+  padding-left: 50px !important;
+}
+
+.experiences-text h2 {
+  font-size: 40px;
+  color: #1d4b3e;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: 500;
+}
+
+.experiences-text p {
+  font-size: 18px;
+  color: #333;
+  font-family: "Frank Ruhl Libre", serif;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.read-more-btn {
+  background-color: #15a1a9;
+  border: none;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+  color: #fafafa;
+  /* Ensures text color */
+  font-size: 16px;
+  text-align: center;
+}
+
+.read-more-btn:hover {
+  background-color: #15a1a9;
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  background-size: cover;
+}
+
+.col-md-8 {
+  padding: 0px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fafafa !important;
+  /* Make arrows #fafafa */
+}
+
+.experience-section {
+  background-color: #15a1a9;
+  /* Light greyish-beige background */
+  color: #fafafa;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.experience-title {
+  font-size: 40px;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fafafa !important;
+}
+
+.experience-text {
+  font-size: 18px;
+  max-width: 90%;
+  font-family: "Frank Ruhl Libre", serif;
+  ;
+  margin: 0 auto;
+  color: #fafafa;
+  line-height: 1.6;
+}
+
+.testimonial-card {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(29, 75, 62, 0.5) !important;
+
+  background: #f8f9fa;
+}
+
+.testimonial-header {
+  background-color: #15a1a9;
+  color: #fafafa;
+  padding: 20px;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: bold;
+}
+
+.testimonial-text {
+  font-family: "Frank Ruhl Libre", serif;
+  margin: 15px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  /* Limits text to 4 lines */
+  /* Optional: Adjust line spacing */
+  max-height: 6rem;
+
+}
+
+.luxury-section {
+  background-color: #15a1a9;
+  padding: 80px 0;
+}
+
+.luxury-title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Frank Ruhl Libre", serif;
+  color: #fafafa !important;
+  margin-bottom: 20px;
+}
+
+.luxury-btn {
+  display: inline-block;
+  border: 2px solid #fafafa;
+  padding: 10px 20px;
+  font-family: "Frank Ruhl Libre", serif;
+  color: #fafafa;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.luxury-btn:hover {
+  background-color: #15a1a9;
+  color: #fff;
+}
+
+.philosophy-faq-section {
+  padding: 60px 0;
+}
+
+.philosophy-content h2,
+.faq-content {
+  color: #0f3d2e;
+  /* Dark green */
+  font-weight: bold;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.accordion-button {
+  background-color: #f8f8f2;
+
+  color: #0f3d2e;
+
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f8f8f2;
+  color: #0f3d2e;
+}
+
+.accordion-body {
+  font-size: 14px;
+  font-family: "Frank Ruhl Libre", serif;
+  color: #333;
+  line-height: 28px;
+  font-weight: 400;
+  background-color: #f8f8f2;
+}
+
+.button_greeen {
+  background-color: #15a1a9 !important;
+  color: #fafafa !important;
+  padding: 18px 18px !important;
+  width: 100%;
+  font-size: 18px !important;
+  border-radius: 0% !important;
+  text-decoration: none;
+}
+
+.btn-dark-green:hover {
+  background-color: #0c2b21;
+  color: #fafafa;
+}
+
+.footer {
+  background-color: #e6d5b8;
+  padding: 40px 0;
+}
+
+.footer h5 {
+  font-weight: bold;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: black;
+}
+
+.app-links img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+}
+
+
+/* rooms css */
+
+.hero {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  color: #fafafa;
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 3rem;
+}
+
+.breadcrumb-section {
+  background: #15a1a9;
+  padding: 16px;
+  font-size: 12px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.breadcrumb a {
+  color: #fafafa;
+  font-family: "Frank Ruhl Libre", serif;
+  text-decoration: none;
+
+}
+
+.head_page {
+  font-weight: 700;
+  font-size: 36px;
+  color: #15a1a9;
+  text-transform: uppercase;
+}
+
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: ">>" !important;
+  color: #fafafa !important;
+  font-weight: bold;
+
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for first 4 images */
+.gallery div:nth-child(-n + 28) img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Modal Custom Styling */
+.modal-content {
+  background: rgba(0, 0, 0, 0.8);
+  /* Dark Background */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-img {
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Close Button Styling */
+.custom-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: #fafafa;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.custom-close:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.offer-container {
+  padding: 30px 0;
+}
+
+.offer-line {
+  border-bottom: 1px dotted #000;
+  margin-top: 20px;
+}
+
+.offer-img img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  display: block;
+}
+
+.btn_custom_room {
+  background-color: #15a1a9;
+  color: #fafafa;
+  border: none;
+  padding: 10px 20px;
+}
+
+.btn_custom_room a {
+  color: #fafafa;
+}
+
+.btn-custom:hover {
+  background-color: #15a1a9;
+}
+
+.offer-details ul li {
+  margin-top: 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: url("https://source.unsplash.com/1600x900/?hotel") center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Facility Card */
+.facility-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.facility-card:hover img {
+  transform: scale(1.1);
+}
+
+.facility-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.facility-card:hover .overlay {
+  opacity: 1;
+}
+
+.facility-card .overlay h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.facility-card .overlay p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 24px !important;
+  color: #fafafa;
+  padding: 10px 20px;
+}
+
+/* Call to Action */
+.cta-section {
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.cta-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.cta_custom {
+  padding: 14px 40px;
+  background-color: #15a1a9;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.room-card {
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background: #fff;
+}
+
+.room-card:hover {
+  transform: translateY(-10px);
+}
+
+.room-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.room-info {
+  padding: 20px;
+}
+
+.room-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.room-desc {
+  font-size: 16px;
+  color: #555;
+  text-align: justify;
+  line-height: 24px !important;
+}
+
+.room-icons {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #15a1a9;
+  padding: 10px 0;
+}
+
+.room-btn {
+  width: 100%;
+  background: #15a1a9;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.room-btn:hover {
+  background: #15a1a9;
+}
+
+.room-btn a {
+  color: #fafafa;
+}
+
+/* Change the Offcanvas Background Color */
+#mobileNav {
+  background-color: #15a1a9 !important;
+}
+
+#mobileNav .nav-link {
+  color: #fafafa !important;
+}
+
+.contact {
+  margin: auto;
+
+  padding: 50px 20px;
+}
+
+.contact-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+}
+
+.btn-custom {
+  display: block;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.press-btn {
+  border: 1px solid #00aaff;
+  color: #00aaff;
+}
+
+.press-btn:hover {
+  background: #00aaff;
+  color: #fafafa;
+}
+
+.support-btn {
+  background: #00c76f;
+  color: #fafafa;
+}
+
+.support-btn:hover {
+  background: #009a57;
+}
+
+.sales-btn {
+  border: 1px solid #0044cc;
+  color: #0044cc;
+}
+
+.sales-btn:hover {
+  background: #0044cc;
+  color: #fafafa;
+}
+
+.contact-section {
+  background: #fff;
+  padding: 40px;
+  font-family: "Frank Ruhl Libre", serif;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+.btn-submit {
+  background-color: #15a1a9;
+  color: #fafafa;
+  border-radius: 4px;
+  padding: 10px;
+  border: none;
+}
+
+.hero_container {
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  /* Ensure text is dark for contrast */
+}
+
+.hero_container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* Light black transparent overlay */
+
+}
+
+
+.navbar-brand img {
+  height: 40px;
+  width: 100% !important;
+  /* Set default logo size */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition */
+
+}
+
+.icon-fixed {
+  position: fixed;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-fixed:hover {
+  transform: scale(1.1);
+}
+
+.email-icon {
+  left: 20px;
+  bottom: 20px;
+}
+
+.whatsapp-icon {
+  right: 20px;
+  bottom: 20px;
+  background-color: #0072C6;
+}
+
+
+.book-now-icon {
+  display: none !important;
+}
+
+
+
+
+
+.home-icon {
+  display: none !important;
+}
+
+.home-btn-fixed {
+  position: fixed !important;
+  z-index: 1000;
+  bottom: 0;
+  padding: 10px;
+  color: white;
+  background-color: #d49c60 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+
+
+.scroll-top {
+  bottom: 80px;
+  right: 20px;
+
+  background-color: #333;
+  display: none;
+}
+
+.room-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  /* Limits text to 4 lines */
+  line-height: 1.5rem;
+  /* Optional: Adjust line spacing */
+  max-height: 8rem;
+  /* 4 lines * 1.5rem = 6rem */
+}
+
+/* Default desktop styles (already present) */
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .suite {
+    height: 400px;
+    /* reduce height */
+    padding: 40px 16px;
+  }
+
+  .suite h3 {
+    font-size: 1.75rem;
+  }
+
+  .suite p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-icon {
+    display: block !important;
+    right: 100px;
+    bottom: 20px;
+    background-color: #333;
+  }
+}
+
+@media (max-width: 992px) {
+  .book-now-icon {
+    display: block !important;
+    right: 90px;
+    bottom: 20px;
+    padding: 10px;
+    width: unset !important;
+    color: white;
+    background-color: #d49c60 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+    border: 2px solid white;
+    position: fixed;
+    z-index: 1000;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+  .suite {
+    height: 300px;
+    /* further reduce height */
+    padding: 30px 12px;
+  }
+
+  .suite h3 {
+    font-size: 1.5rem;
+  }
+
+  .suite p {
+    font-size: 14px;
+  }
+
+  .suite button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .suite {
+    justify-content: center;
+    /* Center content vertically */
+  }
+}
+
+#navbar {
+  padding: 1rem 0.5rem;
+}
+
+#navbar .navbar-nav .nav-link {
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+#navbar .text-white {
+  font-size: 14px;
+}
+
+.book-now-btn {
+  background-color: #d49c60;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* Modal container */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black with opacity */
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive image */
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+  }
+
+  .close {
+    font-size: 30px;
+    top: 20px;
+    right: 25px;
+  }
+}
+
