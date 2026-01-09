@@ -29,15 +29,15 @@
     color:#fff
 }
 .contact-item {
-           display: flex;
-           align-items: flex-start; /* icon and text start on same line */
-           gap: 12px;
-           a[href^="tel"],
-           a[href^="mailto"] {
-           color: black;
-           text-decoration: none;
-          }
-        }
+    display:flex;
+    align-items:flex-start;
+    gap:12px
+}
+.contact-item a[href^="tel"],
+.contact-item a[href^="mailto"]{
+    color:black;
+    text-decoration:none
+}
 
 .icon {
     width:34px;
