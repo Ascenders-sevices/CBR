@@ -1,0 +1,5 @@
+# Canonicalize to HTTPS + non-www
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.coralbeachresort\.in$ [NC]
+RewriteRule ^ https://coralbeachresort.in%{REQUEST_URI} [L,R=301]
