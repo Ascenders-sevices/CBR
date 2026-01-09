@@ -9,7 +9,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Luxury Rooms in Mahabalipuram | Coral Beach Resort" />
     <meta property="og:description" content="Elegant rooms with modern amenities at Coral Beach Resort. Perfect for family & couples beach vacations." />
-    <meta property="og:url" content="https://www.coralbeachresort.in/rooms" />
+    <meta property="og:url" content="https://www.coralbeachresort.in/rooms.html" />
     <meta property="og:image" content="https://www.coralbeachresort.in/assets/images/og/rooms.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Luxury Rooms | Coral Beach Resort" />
@@ -17,7 +17,7 @@
     <meta name="twitter:image" content="https://www.coralbeachresort.in/assets/images/og/rooms.jpg" />
 
     <link rel="icon" href="/assets/images/Corolminimal.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/style/site.min.css">
+    <link rel="stylesheet" href="/style.min.css">
     <link rel="canonical" href="https://www.coralbeachresort.in/rooms.html" />
 
 
@@ -41,57 +41,32 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- Custom Stylesheets (Keep at the end for better specificity) -->
+    <link rel="stylesheet" href="/assets/style/style.min.css">
+    <link rel="stylesheet" href="/assets/style/Mobile.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "name": "Luxury Rooms | Coral Beach Resort",
-      "url": "https://www.coralbeachresort.in/rooms",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.coralbeachresort.in/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Rooms",
-            "item": "https://www.coralbeachresort.in/rooms"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Product",
-      "name": "Deluxe Room",
-      "description": "Step into unparalleled comfort in our Deluxe Room, where modern elegance meets thoughtful design.",
-      "image": "https://www.coralbeachresort.in/assets/gallery/Deluxe Rooms.png",
-      "offers": {
+  "@type": "Hotel",
+  "name": "Coral Beach Resort",
+  "url": "https://www.coralbeachresort.in/",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Rooms",
+    "itemListElement": [
+      {
         "@type": "Offer",
-        "url": "https://app.axisrooms.com/beV2/displaySearchResultV3.html?room_number=0",
-        "availability": "https://schema.org/InStock"
+        "itemOffered": {
+          "@type": "HotelRoom",
+          "name": "Deluxe Room",
+          "description": "King-size bed, stylish decor, sea view, premium amenities.",
+          "image": "https://www.coralbeachresort.in/assets/gallery/Deluxe Rooms.png"
+        },
+        "url": "https://www.coralbeachresort.in/rooms.html#deluxe"
       }
-    },
-    {
-      "@type": "Product",
-      "name": "Club Room",
-      "description": "Elevate your stay in our Club Room, where sophistication and comfort seamlessly merge.",
-      "image": "https://www.coralbeachresort.in/assets/gallery/Club Suite.png",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://app.axisrooms.com/beV2/displaySearchResultV3.html?room_number=0",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-  ]
+      // Repeat for other rooms
+    ]
+  }
 }
 </script>
 
@@ -99,7 +74,7 @@
 </head>
 
 <body>
-    <script src="/script/index.js" defer></script>
+    <script src="/script/index.min.js" defer></script>
 
 
     <!-- Navbar -->
@@ -130,7 +105,7 @@
         <nav class="navbar navbar-expand-lg fixed-top d-none d-lg-flex" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="/index.html">
-                    <img src="/assets/images/Logo  Corallogo.png" alt="Coral Beach Resort">
+                    <img src="/assets/images/Logo  Corallogo.png" alt="Coral Beach Resort" loading="eager">
                 </a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
@@ -179,7 +154,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="/assets/images/Coralmin.png" alt="Coral Beach Resort">
+                    <img src="/assets/images/Coralmin.png" alt="Coral Beach Resort" loading="eager">
                 </a>
 
                 <!-- Mobile Menu Button -->
@@ -462,11 +437,11 @@
                 <div class="text-center mt-4">
                     <div class="social-icons">
                             <a href="https://www.facebook.com/share/19GKK9A5T2/" target="_blank"><img class="img-fluid"
-                                    src="/assets/images/FACE3.png" alt="Share Coral Beach Resort on Facebook"></a>
+                                    src="/assets/images/FACE3.png" alt="Share Coral Beach Resort on Facebook" loading="lazy"></a>
                             <a href="https://www.instagram.com/coralbeachresort_ecr?igsh=eGNxMm9xMW15dXA3"
-                                target="_blank"><img class="img-fluid" src="/assets/images/instagram2.png" alt="Follow Coral Beach Resort on Instagram"></a>
+                                target="_blank"><img class="img-fluid" src="/assets/images/instagram2.png" alt="Follow Coral Beach Resort on Instagram" loading="lazy"></a>
                             <a href="https://youtube.com/@coralbeachresort109?si=WukbimylsYiRYW2r" target="_blank"><img
-                                    class="img-fluid" src="/assets/images/Y-1.png" alt="Watch Coral Beach Resort videos on YouTube"></a>
+                                    class="img-fluid" src="/assets/images/Y-1.png" alt="Watch Coral Beach Resort videos on YouTube" loading="lazy"></a>
 
                         </div>
                 </div>

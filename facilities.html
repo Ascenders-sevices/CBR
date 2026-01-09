@@ -16,7 +16,7 @@
     <meta name="twitter:image" content="https://www.coralbeachresort.in/assets/images/og/facilities.jpg" />
 
     <link rel="icon" href="/assets/images/Corolminimal.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/style/site.min.css">
+    <link rel="stylesheet" href="/style.min.css">
     <link rel="canonical" href="https://www.coralbeachresort.in/facilities" />
 
 
@@ -37,9 +37,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 
     <!-- Custom Stylesheets (Keep at the end for better specificity) -->
+    <link rel="stylesheet" href="/assets/style/style.min.css">
+    <link rel="stylesheet" href="/assets/style/Mobile.min.css">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -59,22 +60,48 @@
     {
       "@type": "Hotel",
       "name": "Coral Beach Resort",
+      "url": "https://www.coralbeachresort.in/",
+      "logo": "https://www.coralbeachresort.in/assets/images/og/facilities.jpg",
+      "image": [
+        "https://www.coralbeachresort.in/assets/gallery/swimming pool.png",
+        "https://www.coralbeachresort.in/assets/gallery/spaa.png",
+        "https://www.coralbeachresort.in/assets/gallery/Bar.jpg",
+        "https://www.coralbeachresort.in/assets/gallery/reataurant.png",
+        "https://www.coralbeachresort.in/assets/gallery/ball 4.png",
+        "https://www.coralbeachresort.in/assets/gallery/tabletennise.png",
+        "https://www.coralbeachresort.in/assets/gallery/play ground.png",
+        "https://www.coralbeachresort.in/assets/gallery/ball2.png",
+        "https://www.coralbeachresort.in/assets/gallery/ball1.png"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, Venkateshwara Complex 35, Meeran Sahib St, Mount Road",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600002",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91 9444-333-333",
       "amenityFeature": [
         {"@type": "LocationFeatureSpecification","name": "Swimming Pool","value": true},
-        {"@type": "LocationFeatureSpecification","name": "Spa","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Anta Spa","value": true},
         {"@type": "LocationFeatureSpecification","name": "Beach Activities","value": true},
-        {"@type": "LocationFeatureSpecification","name": "Fine Dining","value": true}
+        {"@type": "LocationFeatureSpecification","name": "Fine Dining / Beach Restaurant","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Lounge Bar","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Conference Hall","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Indoor Games","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Play Area","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Grand Ball Room","value": true},
+        {"@type": "LocationFeatureSpecification","name": "Small Board Room","value": true}
       ]
     }
   ]
 }
 </script>
 
-
 </head>
-
 <body>
-    <script src="/script/index.js" defer></script>
+    <script src="/script/index.min.js" defer></script>
     <!-- Navbar -->
     <div class="over">
         <a href="https://wa.me/919444333333" target="_blank">
@@ -106,7 +133,7 @@
         <nav class="navbar navbar-expand-lg fixed-top d-none d-lg-flex" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="/index.html">
-                    <img src="/assets/images/Logo  Corallogo.png" alt="Coral Beach Resort">
+                    <img src="/assets/images/Logo  Corallogo.png" alt="Coral Beach Resort" loading="eager">
                 </a>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
@@ -157,7 +184,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="/assets/images/Coralmin.png" alt="Coral Beach Resort">
+                    <img src="/assets/images/Coralmin.png" alt="Coral Beach Resort" loading="eager">
                 </a>
 
                 <!-- Mobile Menu Button -->
@@ -243,7 +270,7 @@
                 <!-- Facility Card -->
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/swimming pool.png" class="img-fluid" alt="Swimming Pool">
+                        <img src="/assets/gallery/swimming pool.png" class="img-fluid" alt="Swimming Pool" loading="lazy">
                         <div class="overlay">
                             <h3>Swimming Pool</h3>
                             <p>Dive into serenity at our crystal-clear pool, where every splash feels like pure bliss by
@@ -254,7 +281,7 @@
 
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/spaa.png" class="img-fluid" alt="Spa">
+                        <img src="/assets/gallery/spaa.png" class="img-fluid" alt="Spa" loading="lazy">
                         <div class="overlay">
                             <h3>Anta Spa</h3>
                             <p>where luxury meets tranquillity, and every ritual is a symphony of healing, renewal, and
@@ -266,7 +293,7 @@
 
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/Bar.jpg" class="img-fluid" alt="Conference Hall">
+                        <img src="/assets/gallery/Bar.jpg" class="img-fluid" alt="Lounge Bar" loading="lazy">
                         <div class="overlay">
                             <h3>Lounge Bar </h3>
                             <p>where luxury meets calm, and every handcrafted drink is poured to perfection in a setting
@@ -277,7 +304,7 @@
 
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/reataurant.png" class="img-fluid" alt="Indoor Games">
+                        <img src="/assets/gallery/reataurant.png" class="img-fluid" alt="Indoor Games" loading="lazy">
                         <div class="overlay">
                             <h3>Beach Restaurant</h3>
                             <p>Indulge in a culinary journey at our multi-cuisine Beach Restaurant, where world-class
@@ -288,7 +315,7 @@
 
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/ball 4.png" class="img-fluid" alt="Play Area">
+                        <img src="/assets/gallery/ball 4.png" class="img-fluid" alt="Play Area" loading="lazy">
                         <div class="overlay">
                             <h3>Conference Hall</h3>
                             <p>Redefine business in style at our premium Conference Hall — a sophisticated space crafted
@@ -299,7 +326,7 @@
 
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/tabletennise.png" class="img-fluid" alt="Ballroom">
+                        <img src="/assets/gallery/tabletennise.png" class="img-fluid" alt="Ballroom" loading="lazy">
                         <div class="overlay">
                             <h3>Indoor Games </h3>
                             <p>Engage in endless entertainment with our indoor games, offering fun-filled moments and
@@ -310,7 +337,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/play ground.png" class="img-fluid" alt="Beach Restaurant">
+                        <img src="/assets/gallery/play ground.png" class="img-fluid" alt="Beach Restaurant" loading="lazy">
                         <div class="overlay">
                             <h3>Play Area</h3>
                             <p>Spark your inner child at our Play Area, a dynamic space where fun, laughter, and
@@ -320,7 +347,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/ball2.png" class="img-fluid" alt="Small Board ">
+                        <img src="/assets/gallery/ball2.png" class="img-fluid" alt="Small Board" loading="lazy">
                         <div class="overlay">
                             <h3>Grand Ball Room </h3>
                             <p>A world of refined luxury and timeless elegance, where every event is transformed into an
@@ -330,7 +357,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <div class="facility-card">
-                        <img src="/assets/gallery/ball1.png" class="img-fluid" alt="Studio Suite">
+                        <img src="/assets/gallery/ball1.png" class="img-fluid" alt="Studio Suite" loading="lazy">
                         <div class="overlay">
                             <h3>Samll Board Room </h3>
                             <p>Refined, private space where precision, exclusivity, and state-of-the-art facilities
@@ -429,11 +456,11 @@
                             Policy</a></p>
                             <div class="social-icons">
                             <a href="https://www.facebook.com/share/19GKK9A5T2/" target="_blank"><img class="img-fluid"
-                                    src="/assets/images/FACE3.png" alt="Share Coral Beach Resort on Facebook"></a>
+                                    src="/assets/images/FACE3.png" alt="Share Coral Beach Resort on Facebook" loading="lazy"></a>
                             <a href="https://www.instagram.com/coralbeachresort_ecr?igsh=eGNxMm9xMW15dXA3"
-                                target="_blank"><img class="img-fluid" src="/assets/images/instagram2.png" alt="Follow Coral Beach Resort on Instagram"></a>
+                                target="_blank"><img class="img-fluid" src="/assets/images/instagram2.png" alt="Follow Coral Beach Resort on Instagram" loading="lazy"></a>
                             <a href="https://youtube.com/@coralbeachresort109?si=WukbimylsYiRYW2r" target="_blank"><img
-                                    class="img-fluid" src="/assets/images/Y-1.png" alt="Watch Coral Beach Resort videos on YouTube"></a>
+                                    class="img-fluid" src="/assets/images/Y-1.png" alt="Watch Coral Beach Resort videos on YouTube" loading="lazy"></a>
                                     
 
                         </div>
