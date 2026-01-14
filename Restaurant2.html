@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seaside Bites Menu | Coral Beach Resort</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coral-primary: #FF7F50;
+            --sand-bg: #FFF5E1;
+            --ocean-dark: #2C3E50;
+            --teal-accent: #20B2AA;
+            --sun-yellow: #F4D03F;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--sand-bg);
+            color: var(--ocean-dark);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .coral-text { color: var(--coral-primary); }
+        .teal-text { color: var(--teal-accent); }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--teal-accent);
+            border-radius: 4px;
+        }
+
+        .menu-item-card {
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .menu-item-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .nav-link.active {
+            color: var(--teal-accent);
+            border-bottom: 2px solid var(--teal-accent);
+        }
+
+        /* Wave Pattern overlay */
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 10c-1.1 0-2-.9-2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9s2-.9 2-1.9V2c0-1.1.9-2 2-2s2 .9 2 2v6.1c0 1 .9 1.9 2 1.9z' fill='%2320B2AA' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        /* Illustration container base style */
+        .illustration-bg {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15; /* Subtle opacity */
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-[#FFF5E1]">
+
+    <!-- Fixed Pattern Background -->
+    <div class="fixed inset-0 bg-pattern pointer-events-none z-0"></div>
+
+    <!-- Header Section -->
+    <header class="relative z-10 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <div class="flex flex-col items-center justify-center mb-4">
+                 <!-- Logo Image Replacement -->
+                 <img src="LogoCoral.png" 
+                 alt="Coral Beach Resort Logo" 
+                 class="h-24 w-auto mb-2 object-contain hover:scale-105 transition-transform duration-300"
+                 onerror="this.onerror=null; this.src='https://placehold.co/300x150/FF7F50/ffffff?text=Coral+Logo&font=playfair';">
+
+                <h1 class="text-xl text-teal-500 tracking-[0.3em] uppercase mt-1"><b>Seaside Bites </b></h1>
+            </div>
+            <div class="border-t border-b border-teal-200 py-3 mt-4">
+                <div class="flex items-center justify-center gap-2 text-orange-600 font-bold">
+                    <i class="far fa-clock"></i>
+                    <span>3:00 PM to 6:00 PM Only</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md overflow-x-auto">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-start md:justify-center whitespace-nowrap space-x-6 py-4 text-sm font-bold uppercase tracking-wide text-gray-600">
+                <li><a href="#hot-beverages" class="nav-link hover:text-teal-500 transition-colors">Hot Sips</a></li>
+                <li><a href="#coolants" class="nav-link hover:text-teal-500 transition-colors">Coolants</a></li>
+                <li><a href="#hot-fries" class="nav-link hover:text-teal-500 transition-colors">Hot Fries</a></li>
+                <li><a href="#baked" class="nav-link hover:text-teal-500 transition-colors">Baked & Sweet</a></li>
+                <li><a href="#sandwiches" class="nav-link hover:text-teal-500 transition-colors">Sandwiches</a></li>
+                <li><a href="#specials" class="nav-link hover:text-teal-500 transition-colors">Specials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 container mx-auto px-4 py-8 space-y-12 max-w-5xl">
+
+        <!-- Hot Beverages -->
+        <section id="hot-beverages" class="scroll-mt-24 relative overflow-hidden p-8 rounded-xl bg-white/50 border border-orange-100 shadow-sm">
+            
+            <!-- Side Illustration: Tea Cup -->
+            <div class="absolute right-0 bottom-0 h-full w-1/3 md:w-1/4 pointer-events-none z-0 opacity-80 flex items-end justify-end">
+                 <img src="tea_cup.png" alt="" class="object-contain max-h-full opacity-60 mix-blend-multiply" 
+                      onerror="this.style.display='none'">
+            </div>
+            
+            <div class="flex items-center justify-center mb-8 relative z-10">
+                <div class="h-px bg-orange-300 w-12"></div>
+                <div class="flex items-center mx-4">
+                    <i class="fas fa-mug-hot text-2xl text-orange-500 mr-3"></i>
+                    <h2 class="text-3xl font-serif text-gray-800">Hot Beverages</h2>
+                </div>
+                <div class="h-px bg-orange-300 w-12"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 relative z-10" id="hot-beverages-container">
+                <!-- Content injected via JS -->
+            </div>
+        </section>
+
+        <!-- Body Coolants & Curd -->
+        <section id="coolants" class="scroll-mt-24 relative overflow-hidden p-4 rounded-xl">
+            
+             <!-- Side Illustration: Juice/Lemon -->
+             <div class="absolute left-0 top-10 h-3/4 w-1/4 pointer-events-none z-0 opacity-80 flex items-start justify-start">
+                <img src="juice_glass.png" alt="" class="object-contain max-h-full opacity-40 mix-blend-multiply -rotate-12" 
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="flex items-center justify-center mb-8 relative z-10">
+                <div class="h-px bg-teal-300 w-12"></div>
+                <div class="flex items-center mx-4">
+                    <i class="fas fa-snowflake text-2xl text-teal-500 mr-3"></i>
+                    <h2 class="text-3xl font-serif text-gray-800">Body Coolants</h2>
+                </div>
+                <div class="h-px bg-teal-300 w-12"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-teal-100 relative overflow-hidden group backdrop-blur-sm bg-white/90">
+                    <h3 class="text-xl font-bold text-teal-600 mb-4 flex items-center relative z-10">
+                        <i class="fas fa-glass-whiskey mr-2"></i> Refreshers
+                    </h3>
+                    <div id="coolants-container" class="space-y-4 relative z-10"></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-yellow-100 relative overflow-hidden group backdrop-blur-sm bg-white/90">
+                    <h3 class="text-xl font-bold text-yellow-600 mb-4 flex items-center relative z-10">
+                        <i class="fas fa-tint mr-2"></i> Curd Mixture
+                    </h3>
+                    <div id="curd-container" class="space-y-4 relative z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Fries & Sundal -->
+        <section id="hot-fries" class="scroll-mt-24 relative">
+            
+            <!-- Side Illustration: Fries -->
+            <div class="absolute right-0 top-0 h-full w-1/4 pointer-events-none z-0 opacity-80 flex items-center justify-end">
+                <img src="fries.png" alt="" class="object-contain max-h-48 opacity-40 mix-blend-multiply rotate-12" 
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="bg-orange-50 rounded-xl p-8 border border-orange-100 relative overflow-hidden">
+                <div class="flex items-center justify-center mb-8 relative z-10">
+                    <i class="fas fa-fire text-2xl text-orange-500 mr-3"></i>
+                    <h2 class="text-3xl font-serif text-gray-800">Hot Fries & Sundal</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div class="relative">
+                        <h3 class="font-bold text-lg text-orange-800 mb-3 border-b border-orange-200 pb-2 relative z-10 flex items-center">
+                            <i class="fas fa-utensils text-orange-400 mr-2 text-sm"></i> Fried Snacks
+                        </h3>
+                        <div id="fries-container" class="space-y-3 relative z-10"></div>
+                    </div>
+                    <div class="relative">
+                        <h3 class="font-bold text-lg text-orange-800 mb-3 border-b border-orange-200 pb-2 relative z-10 flex items-center">
+                            <i class="fas fa-seedling text-orange-400 mr-2 text-sm"></i> Healthy Sundal
+                        </h3>
+                        <div id="sundal-container" class="space-y-3 relative z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Baked Soft -->
+        <section id="baked" class="scroll-mt-24 relative overflow-hidden p-8 rounded-xl bg-white/50 border border-yellow-100 shadow-sm mt-8">
+            
+            <!-- Side Illustration: Muffin/Cookie -->
+            <div class="absolute left-0 bottom-0 h-full w-1/3 pointer-events-none z-0 opacity-80 flex items-end justify-start">
+                <img src="muffin.png" alt="" class="object-contain max-h-full opacity-40 mix-blend-multiply" 
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="flex items-center justify-center mb-8 relative z-10">
+                <div class="h-px bg-orange-300 w-12"></div>
+                <div class="flex items-center mx-4">
+                    <i class="fas fa-cookie-bite text-2xl text-orange-500 mr-3"></i>
+                    <h2 class="text-3xl font-serif text-gray-800">Baked & Soft</h2>
+                </div>
+                <div class="h-px bg-orange-300 w-12"></div>
+            </div>
+            <div id="baked-container" class="grid md:grid-cols-2 gap-6 relative z-10"></div>
+        </section>
+
+        <!-- Sandwiches & Pasta -->
+        <section id="sandwiches" class="scroll-mt-24 relative overflow-hidden p-4 rounded-xl">
+            
+             <!-- Side Illustration: Sandwich/Burger -->
+             <div class="absolute right-0 top-1/4 h-1/2 w-1/4 pointer-events-none z-0 opacity-80 flex items-center justify-end">
+                <img src="sandwich.png" alt="" class="object-contain max-h-full opacity-30 mix-blend-multiply rotate-6" 
+                     onerror="this.style.display='none'">
+            </div>
+
+            <div class="flex items-center justify-center mb-8 relative z-10">
+                <div class="h-px bg-teal-300 w-12"></div>
+                <div class="flex items-center mx-4">
+                    <i class="fas fa-hamburger text-2xl text-teal-500 mr-3"></i>
+                    <h2 class="text-3xl font-serif text-gray-800">Heavier Bites</h2>
+                </div>
+                <div class="h-px bg-teal-300 w-12"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                 <div>
+                    <h3 class="text-xl font-bold text-teal-600 mb-4 flex items-center">
+                        <i class="fas fa-bread-slice mr-2"></i> Club Sandwiches
+                    </h3>
+                    <div id="sandwich-container" class="space-y-4 bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-200 bg-white/90 backdrop-blur-sm"></div>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold text-teal-600 mb-4 flex items-center">
+                         <i class="fas fa-bowl-food mr-2"></i> Hot Bowl
+                    </h3>
+                    <div id="bowl-container" class="space-y-4 bg-white p-6 rounded-lg shadow-sm border-l-4 border-teal-200 bg-white/90 backdrop-blur-sm"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specials -->
+        <section id="specials" class="scroll-mt-24">
+             <div class="bg-teal-900 text-teal-50 rounded-xl p-8 relative overflow-hidden text-center bg-cover bg-center shadow-lg" 
+                  style="background-image: linear-gradient(rgba(2, 31, 29, 0.61), rgba(19, 78, 74, 0)), url('fish1.png');">
+                <div class="relative z-10">
+                    <div class="inline-block mb-4">
+                        <i class="fas fa-crown text-4xl text-yellow-400 mb-2 animate-bounce"></i>
+                    </div>
+                    <h2 class="text-3xl font-serif text-teal-100 mb-6 flex justify-center items-center">
+                        <i class="fas fa-star text-yellow-400 mr-3 text-2xl"></i> Seaside Special <i class="fas fa-star text-yellow-400 ml-3 text-2xl"></i>
+                    </h2>
+                    <div class="inline-block bg-teal-800/60 p-6 rounded-lg border border-teal-500/30 backdrop-blur-sm shadow-xl relative group hover:bg-teal-800/70 transition-colors">
+                        <i class="fas fa-fish text-6xl text-teal-600/30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:scale-125 transition-transform duration-500"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2 relative z-10">Full Fish Fry</h3>
+                        <p class="text-teal-200 italic mb-4 relative z-10">(Seasonal)</p>
+                        <div class="text-3xl font-bold text-yellow-400 relative z-10">₹150</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="bg-white p-6 rounded-lg shadow-sm mt-12 text-center border-t-4 border-teal-500 relative overflow-hidden">
+            <h3 class="text-xl font-bold text-gray-800 mb-2 relative z-10">Call to Order</h3>
+            <p class="text-2xl font-bold text-teal-600 font-mono relative z-10">7448899494 / 6384199333</p>
+        </div>
+
+        <div class="text-center text-gray-500 text-sm italic mt-8 pb-8">
+            * Taxes as Applicable
+        </div>
+
+    </main>
+
+    <!-- Scroll to top -->
+    <button onclick="window.scrollTo(0,0)" class="fixed bottom-6 right-6 bg-teal-500 text-white p-3 rounded-full shadow-lg hover:bg-teal-600 transition z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Data Structure extracted from PDF 2
+        const menuData = {
+            hotBeverages: [
+                { name: "Tea / Black Tea", price: "80" },
+                { name: "Green Tea / Masala Tea", price: "80" },
+                { name: "Black Coffee", price: "80" },
+                { name: "Hot Lemon Tea", price: "80" },
+                { name: "Traditional Filter Coffee", price: "80" },
+                { name: "Filter Coffee With Country Sugar", price: "120" }
+            ],
+            coolants: [
+                { name: "Nannari", price: "60" },
+                { name: "Nannari Lemon", price: "80" },
+                { name: "Grape", price: "60" },
+                { name: "Cold Coffee", price: "120" },
+                { name: "Lemon Nimbu Pani", price: "100" },
+                { name: "Lemon Iced Tea", price: "125" },
+                { name: "Lemon Soda / Salt", price: "125" },
+                { name: "Nannari Soda", price: "125" }
+            ],
+            curd: [
+                { name: "Rich Buttermilk", price: "100" },
+                { name: "Lassi Classic", price: "100" },
+                { name: "Mango / Strawberry Lassi", price: "100" }
+            ],
+            fries: [
+                { name: "French Fries", price: "120" },
+                { name: "Cheese Balls (5 Pcs)", price: "120" },
+                { name: "Potato Wedges", price: "120" },
+                { name: "Aloo Samosa (2 Pcs)", price: "120" },
+                { name: "Veg Burger", price: "120" }
+            ],
+            sundal: [
+                { name: "Multigrain Sundal", price: "100" },
+                { name: "Peanut Sundal", price: "100" },
+                { name: "Sweetcorn", price: "100" }
+            ],
+            baked: [
+                { name: "Bread Butter Jam Toast", price: "100" },
+                { name: "Chilli Cheese Toast", price: "120" },
+                { name: "Brownie with Ice Cream", price: "200" },
+                { name: "Cookies (5 Pcs)", price: "100" },
+                { name: "Extra Cheese", price: "50" }
+            ],
+            sandwiches: [
+                { name: "Veg / Veg Mayo Sandwich", price: "220" },
+                { name: "Club Sandwich", price: "250" },
+                { name: "Creamy Corn Sandwich", price: "175" },
+                { name: "Paneer Sandwich", price: "250" }
+            ],
+            bowl: [
+                { name: "Cheese Pasta", price: "200" }
+            ]
+        };
+
+        // Render Functions
+        const createItemHTML = (item, simple = false) => {
+            if(simple) {
+                return `
+                    <div class="flex justify-between items-center border-b border-dashed border-gray-200 pb-2 last:border-0 hover:bg-gray-50 transition-colors p-1 rounded">
+                        <h4 class="font-bold text-gray-700">${item.name}</h4>
+                        <span class="font-bold text-teal-600 whitespace-nowrap">₹${item.price}</span>
+                    </div>
+                `;
+            }
+            return `
+                <div class="menu-item-card bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex justify-between items-center group">
+                    <h4 class="font-bold text-lg text-gray-800 group-hover:text-coral-600 transition-colors">${item.name}</h4>
+                    <span class="font-bold text-xl text-coral-600 group-hover:scale-110 transition-transform">₹${item.price}</span>
+                </div>
+            `;
+        };
+
+        // Inject Content
+        document.getElementById('hot-beverages-container').innerHTML = menuData.hotBeverages.map(i => createItemHTML(i)).join('');
+        
+        document.getElementById('coolants-container').innerHTML = menuData.coolants.map(i => createItemHTML(i, true)).join('');
+        document.getElementById('curd-container').innerHTML = menuData.curd.map(i => createItemHTML(i, true)).join('');
+        
+        document.getElementById('fries-container').innerHTML = menuData.fries.map(i => createItemHTML(i, true)).join('');
+        document.getElementById('sundal-container').innerHTML = menuData.sundal.map(i => createItemHTML(i, true)).join('');
+        
+        document.getElementById('baked-container').innerHTML = menuData.baked.map(i => createItemHTML(i)).join('');
+        
+        document.getElementById('sandwich-container').innerHTML = menuData.sandwiches.map(i => createItemHTML(i, true)).join('');
+        document.getElementById('bowl-container').innerHTML = menuData.bowl.map(i => createItemHTML(i, true)).join('');
+
+    </script>
+</body>
+</html>
