@@ -502,7 +502,7 @@
                             <h4 class="font-bold text-gray-800 group-hover:text-[#C5A059] transition-colors text-lg">${item.name}</h4>
                             ${item.desc ? `<p class="text-sm desc-text italic mt-1">${item.desc}</p>` : ''}
                         </div>
-                        <span class="font-bold text-[#1a3c34] ml-4 whitespace-nowrap text-lg">â‚¹${item.price}</span>
+                        <span class="font-bold text-[#1a3c34] ml-4 whitespace-nowrap text-lg">&#8377;${item.price}</span>
                     </div>
                 `;
             }
@@ -513,7 +513,7 @@
                         ${item.desc ? `<p class="text-sm desc-text mb-2 font-medium">${item.desc}</p>` : ''}
                     </div>
                     <div class="text-right">
-                        <span class="block font-bold text-xl text-[#C5A059]">â‚¹${item.price}</span>
+                        <span class="block font-bold text-xl text-[#C5A059]">&#8377;${item.price}</span>
                     </div>
                 </div>
             `;
@@ -526,7 +526,7 @@
                         <h4 class="font-bold text-lg text-orange-50">${item.name}</h4>
                         ${item.desc ? `<p class="text-sm text-orange-200/90 italic">${item.desc}</p>` : ''}
                     </div>
-                    <span class="font-bold text-xl text-[#C5A059] ml-4">â‚¹${item.price}</span>
+                    <span class="font-bold text-xl text-[#C5A059] ml-4">&#8377;${item.price}</span>
                 </div>
             `;
         };
@@ -550,7 +550,7 @@
             <div class="text-center p-3 border border-[#C5A059]/30 rounded hover:bg-[#C5A059] hover:text-[#1a3c34] transition-all cursor-default group">
                 <div class="font-bold">${i.name}</div>
                 ${i.desc ? `<div class="text-[10px] opacity-80">${i.desc}</div>` : ''}
-                <div class="text-[#C5A059] font-bold mt-1 group-hover:text-white">â‚¹${i.price}</div>
+                <div class="text-[#C5A059] font-bold mt-1 group-hover:text-white">&#8377;${i.price}</div>
             </div>
         `).join('');
 
@@ -567,7 +567,7 @@
                     <h4 class="font-bold text-gray-800 text-lg">${i.name}</h4>
                     <p class="text-sm desc-text italic">${i.desc || ''}</p>
                 </div>
-                <span class="font-bold text-[#C5A059] text-xl">â‚¹${i.price}</span>
+                <span class="font-bold text-[#C5A059] text-xl">&#8377;${i.price}</span>
             </div>
         `).join('');
 
@@ -577,4 +577,6 @@
     </script>
 </body>
 </html>
+
+
 

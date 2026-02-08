@@ -356,7 +356,7 @@
             <div class="glass-card p-5 rounded-lg group hover:border-cyan-400/50 transition-all duration-300">
                 <div class="flex justify-between items-start mb-2">
                     <h4 class="text-xl font-bold text-gray-100 group-hover:text-cyan-400 transition-colors">${item.name}</h4>
-                    <span class="text-xl font-bold text-cyan-400 price-col">â‚¹${item.price}</span>
+                    <span class="text-xl font-bold text-cyan-400 price-col">&#8377;${item.price}</span>
                 </div>
                 <p class="text-sm text-gray-400 italic">${item.desc}</p>
             </div>
@@ -369,7 +369,7 @@
                         <h4 class="font-bold text-lg text-gray-200">${item.name}</h4>
                         <p class="text-xs text-gray-500">${item.desc}</p>
                     </div>
-                    <span class="font-bold text-pink-400 price-col ml-4 whitespace-nowrap">â‚¹${item.price}</span>
+                    <span class="font-bold text-pink-400 price-col ml-4 whitespace-nowrap">&#8377;${item.price}</span>
                 </div>
             </div>
         `;
@@ -378,8 +378,8 @@
             <div class="flex justify-between items-center py-2 border-b border-gray-800 last:border-0 hover:bg-white/5 px-2 rounded transition-colors">
                 <div class="text-gray-300 font-medium">${item.name}</div>
                 <div class="flex space-x-6 price-col text-sm text-gray-400">
-                    <span class="w-12 text-right text-cyan-300">â‚¹${item.price30}</span>
-                    <span class="w-16 text-right text-gray-500">â‚¹${item.priceBot}</span>
+                    <span class="w-12 text-right text-cyan-300">&#8377;${item.price30}</span>
+                    <span class="w-16 text-right text-gray-500">&#8377;${item.priceBot}</span>
                 </div>
             </div>
         `;
@@ -387,7 +387,7 @@
         const renderSimpleRow = (item) => `
              <div class="flex justify-between items-center py-2 border-b border-gray-700/50 last:border-0">
                 <div class="text-gray-300">${item.name}</div>
-                <div class="font-bold text-white price-col">â‚¹${item.price}</div>
+                <div class="font-bold text-white price-col">&#8377;${item.price}</div>
             </div>
         `;
 
@@ -410,11 +410,13 @@
         document.getElementById('beverages-container').innerHTML = menuData.beverages.map(item => `
             <div class="text-center p-3 rounded bg-black/30 border border-gray-700">
                 <div class="text-gray-400 text-sm mb-1">${item.name}</div>
-                <div class="text-cyan-400 font-bold price-col">â‚¹${item.price}</div>
+                <div class="text-cyan-400 font-bold price-col">&#8377;${item.price}</div>
             </div>
         `).join('');
 
     </script>
 </body>
 </html>
+
+
 
